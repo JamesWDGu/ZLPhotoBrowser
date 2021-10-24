@@ -26,7 +26,7 @@
 
 import UIKit
 
-let ZLMaxImageWidth: CGFloat = 600
+let ZLMaxImageWidth: CGFloat = 800
 
 struct ZLLayout {
     

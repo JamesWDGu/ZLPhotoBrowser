@@ -80,11 +80,11 @@ public class ZLPhotoModel: NSObject {
     public var previewSize: CGSize {
         let scale: CGFloat = 2 //UIScreen.main.scale
         if self.whRatio > 1 {
-            let h = min(UIScreen.main.bounds.height, ZLMaxImageWidth) * scale
+            let h = ZLMaxImageWidth * scale
             let w = h * self.whRatio
             return CGSize(width: w, height: h)
         } else {
-            let w = min(UIScreen.main.bounds.width, ZLMaxImageWidth) * scale
+            let w = ZLMaxImageWidth * scale
             let h = w / self.whRatio
             return CGSize(width: w, height: h)
         }

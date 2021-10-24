@@ -132,7 +132,7 @@ class ZLFetchImageOperation: Operation {
         } else {
             self.requestImageID = ZLPhotoManager.fetchImage(for: self.model.asset, size: self.model.previewSize, progress: self.progress) { [weak self] (image, isDegraded) in
                 if !isDegraded {
-                    self?.completion(self?.scaleImage(image?.fixOrientation()), nil)
+                    self?.completion(image?.fixOrientation(), nil)
                     self?.fetchFinish()
                 }
             }
